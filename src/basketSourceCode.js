@@ -1,6 +1,7 @@
 class Basket {
     constructor(){
         this.items = []
+        this.max = 10
     }
     checkBasketEmpty(){
         if(this.items.length === 0){
@@ -19,6 +20,10 @@ class Basket {
     removeItems(){
         this.items.pop()
 
+    }
+
+    isBasketFull(){
+      return this.items.length === this.max ? true : false;
     }
 
 }

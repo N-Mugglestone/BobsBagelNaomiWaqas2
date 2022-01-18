@@ -46,10 +46,32 @@ console.log(`The item was removed from the basket. ${report}`);
 
 }
 
+const checkIsBasketFull = () =>{
+//Arrange
+let testBasket = new Basket();
+let expected = true;
+
+//Setup
+let input = ["Bread", "Milk", "Coke", "Cereal", "Sweets", "Eggs", "Chicken", "Rice", "Pasta", "Roti"];
+
+for(let i = 0; i < 10; i++){
+    testBasket.addItems(input[i]);
+}
+
+
+let actual = testBasket.isBasketFull();
+
+
+//Report
+let report = assertEquals(actual, expected);
+console.log(`The basket has reach its capacity ${report}`);
+
+
+}
 
 
 
 
 
 
-module.exports = {checkBasketEmptyTest, checkItemAdded, checkItemRemoved}; 
+module.exports = {checkBasketEmptyTest, checkItemAdded, checkItemRemoved, checkIsBasketFull}; 
