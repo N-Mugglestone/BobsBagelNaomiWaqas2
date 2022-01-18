@@ -17,7 +17,7 @@ class Basket {
     }
 
     removeItems(){
-
+        this.items.pop()
 
     }
 
