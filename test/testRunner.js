@@ -1,9 +1,13 @@
-const {checkBasketEmptyTest, checkItemAdded, checkItemRemoved, checkIsBasketFull, ifBasketFullDontAdd, } = require('./basket-spec');
+const allBasketTests = require('./basket-spec');
 
 
-checkBasketEmptyTest();
-checkItemAdded();
-checkItemRemoved();
-checkIsBasketFull();
-ifBasketFullDontAdd();
+allBasketTests.checkBasketEmptyTest();
+allBasketTests.checkItemAdded();
+allBasketTests.checkItemRemoved();
+allBasketTests.checkIsBasketFull();
+allBasketTests.ifBasketFullDontAdd();
+allBasketTests.ifMaxSalesReachedIncreaseCapacity();
+allBasketTests.createLargerBasketIfSalesReached();
+
+
 

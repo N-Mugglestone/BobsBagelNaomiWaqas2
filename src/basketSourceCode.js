@@ -1,32 +1,42 @@
 class Basket {
-    constructor(){
+    constructor(maxCapacity = 10) {
         this.items = []
-        this.max = 10
+        this.max = maxCapacity;
+        this.counter = 0;
+        this.maxSales = 4;
     }
-    checkBasketEmpty(){
-        if(this.items.length === 0){
-            console.log(this.items, `Items is in line 7`);
-            return true; 
+    checkBasketEmpty() {
+        if (this.items.length === 0) {
+            return true;
         } else {
             return false;
         }
 
     }
 
-    addItems(str){
+    addItems(str) {
+        if (this.items.length === this.max) {
+            return new Error('Basket full');
+        }
         this.items.push(str)
+        this.counter++
     }
 
-    removeItems(){
+    removeItems() {
         this.items.pop()
 
     }
 
-    isBasketFull(){
-      return this.items.length === this.max ? true : false;
+    isBasketFull() {
+        return this.items.length === this.max ? true : false;
     }
 
+    isSalesReached() {
+        if (this.counter >= this.maxSales)
+            return new Basket(this.max + 1)
+    }
 }
 
 
 module.exports = Basket;
+
