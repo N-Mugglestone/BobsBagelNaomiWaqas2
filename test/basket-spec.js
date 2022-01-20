@@ -127,6 +127,18 @@ const createLargerBasketIfSalesReached = () => {
 
 }
 
+const cannotRemoveItemNotInBasket = () => {
+    //Arrange 
+    let testBasket = new Basket();
+    let expect = true;
+    //Act
+    let removeItems = testBasket.removeItems('Bread')
+    let actual = removeItems instanceof Error;
+    //Assert
+    let result = assertEquals(actual, expect);
+    //Report
+    console.log(`Cannot add item not in basket ${result}`)
+}
 
 allBasketTests = {
     checkBasketEmptyTest,
@@ -135,7 +147,8 @@ allBasketTests = {
     checkIsBasketFull,
     ifBasketFullDontAdd,
     ifMaxSalesReachedIncreaseCapacity,
-    createLargerBasketIfSalesReached
+    createLargerBasketIfSalesReached,
+    cannotRemoveItemNotInBasket,
 };
 
 module.exports = allBasketTests

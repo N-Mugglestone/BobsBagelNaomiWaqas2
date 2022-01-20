@@ -8,6 +8,8 @@ allBasketTests.checkIsBasketFull();
 allBasketTests.ifBasketFullDontAdd();
 allBasketTests.ifMaxSalesReachedIncreaseCapacity();
 allBasketTests.createLargerBasketIfSalesReached();
+allBasketTests.cannotRemoveItemNotInBasket();
+
 
 
 

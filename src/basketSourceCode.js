@@ -22,9 +22,16 @@ class Basket {
         this.counter++
     }
 
-    removeItems() {
-        this.items.pop()
-
+    removeItems(item) {
+        //this.items.pop()
+        try {
+            if (!this.items.includes(item)) throw new Error('Item not in basket')
+            this.items = this.items.filter(thing => thing != item)
+        }
+        catch (err) {
+            console.log(err.message);
+            return err
+        }
     }
 
     isBasketFull() {
@@ -35,6 +42,7 @@ class Basket {
         if (this.counter >= this.maxSales)
             return new Basket(this.max + 1)
     }
+
 }
 
 
