@@ -137,8 +137,20 @@ const cannotRemoveItemNotInBasket = () => {
     //Assert
     let result = assertEquals(actual, expect);
     //Report
-    console.log(`Cannot add item not in basket ${result}`)
+    console.log(`Cannot remove item not in basket ${result}`)
 }
+
+const itemAlreadyInBasket = () => {
+    let testBasket = new Basket();
+    let expect = true;
+    testBasket.addItems('Bread')
+    let addingSameItem = testBasket.addItems('Bread')
+    let actual = addingSameItem instanceof Error;
+    let result = assertEquals(actual, expect);
+    console.log(`Cannot add item already in basket ${result}`);
+}
+
+
 
 allBasketTests = {
     checkBasketEmptyTest,
@@ -149,6 +161,7 @@ allBasketTests = {
     ifMaxSalesReachedIncreaseCapacity,
     createLargerBasketIfSalesReached,
     cannotRemoveItemNotInBasket,
+    itemAlreadyInBasket,
 };
 
 module.exports = allBasketTests

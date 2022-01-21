@@ -9,7 +9,7 @@ allBasketTests.ifBasketFullDontAdd();
 allBasketTests.ifMaxSalesReachedIncreaseCapacity();
 allBasketTests.createLargerBasketIfSalesReached();
 allBasketTests.cannotRemoveItemNotInBasket();
-
+allBasketTests.itemAlreadyInBasket();
 
 
 
