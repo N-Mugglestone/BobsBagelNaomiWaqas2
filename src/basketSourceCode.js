@@ -29,28 +29,28 @@ class Basket {
 
     }
 
-}
 
-removeItems(item) {
-    //this.items.pop()
-    try {
-        if (!this.items.includes(item)) throw new Error('Item not in basket')
-        this.items = this.items.filter(thing => thing != item)
+
+    removeItems(item) {
+        //this.items.pop()
+        try {
+            if (!this.items.includes(item)) throw new Error('Item not in basket')
+            this.items = this.items.filter(thing => thing != item)
+        }
+        catch (err) {
+            console.log(err.message);
+            return err
+        }
     }
-    catch (err) {
-        console.log(err.message);
-        return err
+
+    isBasketFull() {
+        return this.items.length === this.max ? true : false;
     }
-}
 
-isBasketFull() {
-    return this.items.length === this.max ? true : false;
-}
-
-isSalesReached() {
-    if (this.counter >= this.maxSales)
-        return new Basket(this.max + 1)
-}
+    isSalesReached() {
+        if (this.counter >= this.maxSales)
+            return new Basket(this.max + 1)
+    }
 
 
 
