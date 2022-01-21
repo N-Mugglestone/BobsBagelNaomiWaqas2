@@ -17,7 +17,7 @@ class Basket {
     addItems(str) {
         try {
             if (this.items.length === this.max) throw new Error('Baske0t full')
-            if (this.item.includes(str)) throw new Error('Item already in basket')
+            if (this.items.includes(str)) throw new Error('Item already in basket')
             this.items.push(str)
             this.counter++
         }
