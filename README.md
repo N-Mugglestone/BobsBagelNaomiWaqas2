@@ -1,4 +1,4 @@
-### BobsBagels
+### BobsBagels :bagel: :bagel: :bagel:
 
 
 
@@ -8,18 +8,17 @@ This purpose of this mini project was to make learn how to take a User Story and
 In this challenge, myself and a another member of DF Academy transformed User Stories into a Domain Model 
 and used test-driving to develop a program that satisfied the stories we were given.
 
-We used straight up JavaScript in order to do this as we were still early on in the academy and we were making simple and 
-easy to understand code that would be lean code that would also test well. 
+We used straight up JavaScript in order to do this as we were still in the early stages (to be exact, less than a month in!)  in the academy and we were making simple and clean code that would also test well.
 
 <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>
 
-A **User Story** describes one thing a program is expected to do, from the perspective of somebody using that program.
-When planning a program, the client's requirements will be decomposed into many User Stories. 
-Much of a developer's life is spent translating User Stories into a functional system.
-In Object-Oriented Programming, these systems are made up of **Objects** and **Messages**. 
-Objects describe the objects within the system, and Messages describe how those objects interact. We call these systems **Domain Models**.
-
 ---
+
+### These are the specifications and User Stories provided to us for this mini-project ...
+
+### Bob needs you!
+
+He wants you to implement a simple basket feature for him.
 
 ### Part 1
 
@@ -59,3 +58,24 @@ I’d like to see the price of each item before I add it to my basket.
 As a member of the public,
 So that I can prepare to pay
 When I go to checkout I'd like to know the total sum of the bagels in my basket
+
+---
+
+###Tests and potential improvement...
+
+This challenge was simple and to the point, as such the tests were very similar.
+Using Junit assertEquals we formed very simple pass or fail tests, such as ... 
+```
+    const checkBasketEmptyTest = () => {
+    //setup
+    let testBasket = new Basket();
+    let expected = true;
+    //execute
+    let actual = testBasket.checkBasketEmpty();
+    let report = assertEquals(actual, expected);
+    //report
+    return console.log(report);
+    }
+```
+
+To code in this project is clean and simple and as such any improvement would make it more complex which would not be needed. 
