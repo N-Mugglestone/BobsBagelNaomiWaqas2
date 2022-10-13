@@ -1,6 +1,6 @@
-### BobsBagels :bagel: :bagel: :bagel:
+# BobsBagels :bagel: :bagel: :bagel:
 
-
+### This was one of my first delves into Pair Programming and finding out how helpful and fun it was!
 
 This purpose of this mini project was to make learn how to take a User Story and make a domain model out of it
 
@@ -78,4 +78,4 @@ Using Junit assertEquals we formed very simple pass or fail tests, such as ...
     }
 ```
 
-To code in this project is clean and simple and as such any improvement would make it more complex which would not be needed. 
+The code in this project is clean and simple and as such any improvement would make it more complex which would not be needed. However I would change the methodology we went about to get to this end code. I would make a robust DOM model that would be a good reference point to go back to, rather than picking a story and trying to make it work.
